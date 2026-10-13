@@ -1,0 +1,95 @@
+/* The portrait is treated as a physical ID badge: image-only, with a simple lanyard. */
+.profile-badge {
+  position: absolute;
+  z-index: 3;
+  top: 88px;
+  right: 79px;
+  width: min(294px, 72%);
+  aspect-ratio: .747;
+  padding: 8px;
+  overflow: visible;
+  border: 7px solid #fffdf7;
+  border-radius: 27px 27px 35px 35px;
+  background: #fffdf7;
+  box-shadow: 0 22px 42px rgba(23, 52, 59, .2), 0 3px 0 rgba(20, 51, 60, .08);
+  transform: rotate(4deg);
+}
+
+.profile-badge::before {
+  position: absolute;
+  z-index: -1;
+  top: -79px;
+  left: 50%;
+  width: 104px;
+  height: 123px;
+  border: 13px solid #00adc8;
+  border-bottom: 0;
+  border-radius: 72px 72px 0 0;
+  content: "";
+  transform: translateX(-50%) rotate(-4deg);
+}
+
+.profile-badge::after {
+  position: absolute;
+  z-index: 2;
+  top: -18px;
+  left: 50%;
+  width: 54px;
+  height: 28px;
+  border: 5px solid #ff8a4b;
+  border-radius: 8px;
+  background: #fffdf7;
+  box-shadow: 0 4px 0 rgba(20, 51, 60, .06);
+  content: "";
+  transform: translateX(-50%);
+}
+
+.profile-badge img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px 18px 27px 27px;
+  background: #d3f6f3;
+}
+
+.badge-clip {
+  position: absolute;
+  z-index: 3;
+  top: -7px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #123b46;
+  box-shadow: 0 0 0 4px #fffdf7;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 850px) {
+  .profile-badge {
+    top: 43px;
+    right: 52px;
+    width: 185px;
+    border-width: 6px;
+    border-radius: 21px 21px 28px 28px;
+  }
+
+  .profile-badge::before {
+    top: -55px;
+    width: 70px;
+    height: 84px;
+    border-width: 9px;
+  }
+
+  .profile-badge::after {
+    top: -14px;
+    width: 39px;
+    height: 21px;
+    border-width: 4px;
+    border-radius: 6px;
+  }
+
+  .profile-badge img { border-radius: 13px 13px 20px 20px; }
+}

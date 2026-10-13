@@ -1,0 +1,78 @@
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  border: 1px solid rgba(19, 56, 65, .16);
+  border-radius: 999px;
+  color: #7b9298;
+  font: 700 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .04em;
+}
+
+.language-switch button {
+  min-width: 26px;
+  padding: 5px 3px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.language-switch button.active {
+  background: #163c46;
+  color: #fffdf7;
+}
+
+.rp[lang='en'] .copy h1,
+.rp[lang='en'] .shell > header h1 {
+  letter-spacing: -.055em;
+}
+
+.rp[lang='en'] .copy h1 {
+  max-width: 700px;
+  font-size: clamp(42px, 4.15vw, 68px);
+  line-height: 1.02;
+  letter-spacing: -.065em;
+  text-wrap: balance;
+}
+
+.rp[lang='en'] .copy h2 {
+  max-width: 560px;
+  margin: 20px 0 14px;
+  font-size: clamp(17px, 1.55vw, 22px);
+  line-height: 1.25;
+  letter-spacing: -.025em;
+}
+
+.rp[lang='en'] .copy > article {
+  max-width: 600px;
+  font-size: 17px;
+  line-height: 1.72;
+  letter-spacing: -.012em;
+}
+
+.rp[lang='en'] .education h2,
+.rp[lang='en'] .projects h2,
+.rp[lang='en'] .works h2 {
+  line-height: 1.12;
+}
+
+@media (max-width: 850px) {
+  .brand-group { gap: 8px; }
+  .language-switch { padding: 4px 6px; gap: 3px; }
+  .language-switch button { min-width: 22px; }
+  .rp[lang='en'] .copy h1 { font-size: clamp(40px, 10vw, 58px); }
+}
+
+@media (max-width: 560px) {
+  .rph .brand-group { width: 100%; justify-content: space-between; }
+}
